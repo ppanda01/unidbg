@@ -103,7 +103,7 @@ public abstract class BaseVM implements VM, DvmClassFactory {
         } else {
             int hash = object.hashCode();
             if (log.isDebugEnabled()) {
-                log.debug("addObject hash=0x" + Long.toHexString(hash));
+                log.debug("addObject hash=0x" + Long.toHexString(hash) +" className:" + ((DvmClass)object).getClassName());
             }
             if (global) {
                 globalObjectMap.put(hash, object);
